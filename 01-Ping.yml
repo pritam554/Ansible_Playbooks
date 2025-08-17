@@ -4,4 +4,37 @@
   tasks:
     - name: Ping All Host Nodes
       ping:
+
       remote_user: ansible
+
+
+
+
+
+# Explanation:
+
+---
+Marks the start of a YAML document.
+
+- hosts: all
+This play applies to all hosts defined in your inventory file.
+
+tasks:
+Defines the list of actions (tasks) to perform on the hosts.
+
+Task: "Ping All Host Nodes"
+
+ping is a built-in Ansible module (not ICMP ping, but Ansible’s connection test).
+
+It checks whether Ansible can connect to the host, authenticate, and run Python.
+
+ping: null is equivalent to just ping: (since it doesn’t require any arguments).
+
+remote_user: ansible
+Runs the task as the Linux user ansible on the remote hosts.
+
+This means your inventory hosts should allow SSH login as ansible (via password or key).
+
+✅ Purpose:
+
+This playbook is used just to verify connectivity between the control node and all managed nodes using the ansible user.

@@ -6,7 +6,7 @@
       ping:
 
       remote_user: ansible
-
+...
 
 
 
@@ -38,3 +38,4 @@ This means your inventory hosts should allow SSH login as ansible (via password 
 ✅ Purpose:
 
 This playbook is used just to verify connectivity between the control node and all managed nodes using the ansible user.
+
